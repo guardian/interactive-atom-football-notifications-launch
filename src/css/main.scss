@@ -2,7 +2,7 @@
 @import "fonts";
 
 // Uncomment for embeds
-//@import "embed";
+@import "embed";
 
 // Uncomment for full screen (including immersive article main media)
 //@import "fullscreen";
@@ -10,4 +10,40 @@
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Guardian Text Egyptian Web",Georgia,serif;
+  line-height: 24px;
+  font-size: 16px;
+  color: #333;
+  font-feature-settings: 'kern';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  p {
+    padding: 0;
+    margin: 0 0 16px;
+  }
+
+  .web-only {
+    display: block;
+  }
+  .app-only {
+    display: none;
+  }
+}
+
+body.ios,
+body.android {
+  .web-only {
+    display: none;
+  }
+  .app-only {
+    display: block;
+  }
 }
